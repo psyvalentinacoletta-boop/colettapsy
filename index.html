@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Valentina Coletta · Psicologa · Psicologia analitica junghiana · Roma</title>
+<meta name="description" content="Valentina Coletta, psicologa clinica a Roma. Percorsi di psicologia analitica junghiana per adolescenti, adulti e coppie: sogni, immaginazione attiva, trauma dello sviluppo, incongruenza di genere. In presenza e online.">
+<meta property="og:title" content="Valentina Coletta · Psicologa · Psicologia analitica">
+<meta property="og:description" content="Percorsi di psicologia analitica junghiana per adolescenti, adulti e coppie. Roma, in presenza e online.">
+<meta property="og:type" content="website">
+<style>
+  @font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2")}
+  @font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2")}
+  @font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:swap;src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2")}
+  @font-face{font-family:Inter;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format("woff2")}
+  @font-face{font-family:Inter;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/inter-latin-500-normal.woff2) format("woff2")}
+  @font-face{font-family:Inter;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/inter-latin-600-normal.woff2) format("woff2")}
+  :root{
+    --ink:#1d2b2a;
+    --ink-soft:#4a5a58;
+    --paper:#f7f3ec;
+    --paper-2:#efe9de;
+    --deep:#16312f;
+    --deep-2:#1f4240;
+    --accent:#b0793a;
+    --accent-soft:#d9b98a;
+    --line:#d9d1c2;
+    --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    --sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:.2px}
+  h2{font-size:clamp(2rem,4vw,2.7rem);margin-bottom:18px}
+  h3{font-size:1.45rem;margin-bottom:8px}
+  p+p{margin-top:14px}
+  .eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:14px;display:block}
+
+  header{position:sticky;top:0;z-index:20;background:rgba(247,243,236,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{font-family:var(--serif);font-size:1.4rem;font-weight:600;text-decoration:none}
+  nav a{margin-left:26px;text-decoration:none;font-size:.92rem;color:var(--ink-soft)}
+  nav a:hover{color:var(--ink)}
+  .btn{display:inline-block;padding:13px 26px;border-radius:2px;background:var(--accent);color:#fff;text-decoration:none;font-weight:500;font-size:.95rem;border:0;cursor:pointer;font-family:var(--sans)}
+  .btn:hover{background:#9a6830}
+  .btn.ghost{background:transparent;color:var(--paper);border:1px solid rgba(247,243,236,.5)}
+  .btn.ghost:hover{background:rgba(247,243,236,.1)}
+
+  .hero{background:linear-gradient(160deg,var(--deep) 0%,var(--deep-2) 100%);color:var(--paper);padding:110px 0 120px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;border:1px solid rgba(217,185,138,.25);box-shadow:0 0 0 60px rgba(217,185,138,.05),0 0 0 120px rgba(217,185,138,.04)}
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+  .portrait{position:relative;aspect-ratio:4/5;border-radius:999px 999px 14px 14px;border:1px solid var(--accent-soft);box-shadow:0 0 0 8px rgba(217,185,138,.12),0 24px 50px rgba(0,0,0,.35);background:url(img/valentina.jpg) center top/cover no-repeat;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+  .portrait::after{content:"";position:absolute;inset:0;border-radius:inherit}
+  .portrait-cap{margin-top:16px;text-align:center;font-size:.82rem;letter-spacing:.06em;color:var(--accent-soft)}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.4rem);margin-bottom:22px}
+  .hero h1 em{color:var(--accent-soft);font-style:italic;font-weight:500}
+  .hero p.lead{font-size:1.18rem;color:#d8e0dc;max-width:620px}
+  .hero .cta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+  .badge{display:inline-block;margin-top:34px;font-size:.85rem;color:var(--accent-soft);border-top:1px solid rgba(217,185,138,.35);padding-top:14px}
+
+  section{padding:88px 0}
+  section.alt{background:var(--paper-2)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .quote{font-family:var(--serif);font-style:italic;font-size:1.7rem;line-height:1.35;color:var(--deep-2);border-left:3px solid var(--accent);padding-left:24px}
+
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  .card{background:var(--paper);border:1px solid var(--line);padding:28px 26px}
+  section.alt .card{background:#fbf8f2}
+  .card p{color:var(--ink-soft);font-size:.97rem}
+  .card .n{font-family:var(--serif);color:var(--accent);font-size:1.1rem;display:block;margin-bottom:6px}
+
+  .list{list-style:none;margin-top:12px}
+  .list li{padding:10px 0 10px 26px;border-bottom:1px solid var(--line);position:relative;color:var(--ink-soft)}
+  .list li::before{content:"";position:absolute;left:2px;top:19px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+  .list strong{color:var(--ink);font-weight:500}
+  .note{margin-top:22px;padding:14px 18px;border-left:3px solid var(--accent);background:rgba(255,255,255,.5);font-size:.93rem;color:var(--ink-soft)}
+
+  .step{padding-top:18px;border-top:2px solid var(--accent);margin-bottom:26px}
+  .step::before{content:attr(data-n);font-family:var(--serif);font-size:1.6rem;color:var(--accent);display:block;margin-bottom:4px}
+  .step p{color:var(--ink-soft);font-size:.97rem}
+
+  .timeline div{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .timeline span{font-size:.85rem;color:var(--accent);font-weight:600;letter-spacing:.04em}
+  .timeline p{margin:0!important;color:var(--ink-soft)}
+  .timeline strong{color:var(--ink);font-weight:500}
+
+  .contact{background:var(--deep);color:var(--paper)}
+  .contact p,.contact li{color:#d0dad6}
+  .contact .info{list-style:none;margin-top:22px}
+  .contact .info li{padding:6px 0}
+  .contact .info b{color:var(--accent-soft);font-weight:500;display:inline-block;min-width:92px}
+  form{background:var(--deep-2);padding:30px;border:1px solid rgba(217,185,138,.25)}
+  label{display:block;font-size:.85rem;margin-bottom:6px;color:#d0dad6}
+  input[type=text],input[type=email],input[type=tel],textarea,select{width:100%;padding:12px 14px;margin-bottom:16px;background:var(--deep);border:1px solid rgba(247,243,236,.25);color:var(--paper);font:inherit;font-size:.96rem;border-radius:2px}
+  input:focus,textarea:focus,select:focus{outline:2px solid var(--accent-soft);outline-offset:1px}
+  textarea{min-height:110px;resize:vertical}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:.82rem;margin-bottom:18px;color:#c3cfca}
+  .consent input{margin-top:5px}
+  .consent label{margin:0;font-size:.82rem}
+  .hp{position:absolute;left:-9999px}
+  .social{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .social a{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border:1px solid rgba(217,185,138,.55);color:var(--paper);text-decoration:none;font-size:.92rem;border-radius:999px;transition:background .2s,border-color .2s}
+  .social a:hover{border-color:var(--accent-soft)}
+  .social.foot{margin:0 0 16px}
+  .social.foot a{padding:8px 15px;font-size:.85rem}
+  .social a:hover{background:rgba(217,185,138,.12)}
+  .social svg{width:18px;height:18px;fill:currentColor}
+  .map{margin-top:28px}
+  .map-box{height:260px;border:1px solid rgba(217,185,138,.35);background:var(--deep-2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:20px}
+  .map-box p{font-size:.9rem;margin:0!important}
+  .map-box iframe{width:100%;height:100%;border:0;display:block}
+  .map-box.loaded{padding:0;display:block}
+  #cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:100;max-width:760px;margin:0 auto;background:#fbf8f2;color:var(--ink);border:1px solid var(--accent);box-shadow:0 12px 40px rgba(0,0,0,.28);padding:22px 24px 20px;display:none}
+  #cookie-banner.show{display:block}
+  #cookie-banner h2{font-size:1.35rem;margin:0 36px 8px 0}
+  #cookie-banner p{font-size:.88rem;color:var(--ink-soft);line-height:1.55}
+  #cookie-banner p a{color:var(--accent)}
+  #cookie-banner .x{position:absolute;top:10px;right:12px;background:none;border:0;font-size:1.5rem;line-height:1;cursor:pointer;color:var(--ink-soft);padding:6px 10px}
+  #cookie-banner .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+  #cookie-banner .btn{padding:11px 24px;font-size:.9rem}
+  #cookie-banner .btn.refuse{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+  #cookie-banner .btn.refuse:hover{background:var(--paper-2)}
+  .linkbtn{background:none;border:0;color:#c3cfca;text-decoration:underline;cursor:pointer;font:inherit}
+  .maplink{display:inline-block;margin-top:10px;font-size:.88rem;color:var(--accent-soft)}
+
+  footer{background:#0f2220;color:#9fb0ab;font-size:.8rem;padding:30px 0;line-height:1.6}
+  footer a{color:#c3cfca}
+  .todo{background:#fff3cd;color:#6b4e00;padding:0 4px;border-radius:2px}
+
+  @media(max-width:860px){
+    .two,.cards,.hero .wrap{grid-template-columns:1fr}
+    .hero-photo{order:-1;max-width:280px;margin:0 auto}
+    nav a:not(.btn){display:none}
+    .timeline div{grid-template-columns:1fr;gap:2px}
+    section{padding:64px 0}
+    .hero{padding:80px 0 90px}
+  }
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Valentina Coletta</a>
+    <nav>
+      <a href="#approccio">Approccio</a>
+      <a href="#competenze">Competenze</a>
+      <a href="#percorso">Il percorso</a>
+      <a href="#formazione">Formazione</a>
+      <a class="btn" href="#contatti" style="margin-left:26px;color:#fff">Richiedi un colloquio</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+    <span class="eyebrow" style="color:var(--accent-soft)">Psicologia analitica · Roma · In presenza e online</span>
+    <h1>Un luogo per ascoltare<br>ciò che <em>non ha ancora parola</em></h1>
+    <p class="lead">Sono Valentina Coletta, psicologa clinica. Accompagno adolescenti, adulti e coppie in percorsi di psicologia analitica junghiana: lavoro sul sogno, sull’immagine e sulla storia personale per dare forma a ciò che oggi si vive come sintomo, blocco o disorientamento.</p>
+    <div class="cta">
+      <a class="btn" href="#contatti">Richiedi un colloquio conoscitivo</a>
+      <a class="btn ghost" href="#approccio">Scopri l’approccio</a>
+    </div>
+    <span class="badge">Psicologa clinica · Specializzanda in psicoterapia analitica junghiana (A.I.P.A.) · Dal marzo 2027 psicoterapeuta e psicologa analitica</span>
+    </div>
+    <div class="hero-photo">
+      <div class="portrait" id="ritratto" role="img" aria-label="Valentina Coletta, psicologa"></div>
+      <p class="portrait-cap">Dott.ssa Valentina Coletta · Psicologa clinica</p>
+    </div>
+  </div>
+</div>
+
+<section id="approccio">
+  <div class="wrap two">
+    <div>
+      <span class="eyebrow">L’approccio</span>
+      <h2>La psicologia analitica come metodo di lavoro</h2>
+      <p>La psicologia analitica, fondata da C. G. Jung, considera il sintomo un messaggio da comprendere oltre che un problema da eliminare. Il lavoro clinico si svolge nella relazione: ciò che accade tra paziente e analista è parte essenziale del percorso.</p>
+      <p>Gli strumenti sono quelli della tradizione analitica: l’ascolto del materiale onirico, il lavoro con le immagini e i simboli, l’immaginazione attiva, l’attenzione al transfert e alla storia di sviluppo della persona. Il ritmo è concordato insieme, nel rispetto dei tempi di ciascuno.</p>
+    </div>
+    <div class="quote">Il sintomo racconta qualcosa di sé. Il lavoro analitico serve a trovare le parole, e le immagini, per ascoltarlo.</div>
+  </div>
+</section>
+
+<section id="competenze" class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Competenze</span>
+    <h2>Ambiti in cui lavoro</h2>
+    <p style="max-width:680px;color:var(--ink-soft)">Mi occupo di adolescenti, adulti e coppie. Ogni percorso parte da un colloquio conoscitivo in cui valutiamo insieme la richiesta e la modalità più adatta.</p>
+    <div class="cards">
+      <div class="card"><span class="n">I</span><h3>Sogni e immaginazione attiva</h3><p>Esplorazione del materiale onirico e uso dell’immaginazione attiva come strumento per entrare in dialogo con i contenuti interni.</p></div>
+      <div class="card"><span class="n">II</span><h3>Trauma e dissociazione</h3><p>Lavoro con gli effetti del trauma dello sviluppo e con i disturbi traumatico-dissociativi, con attenzione al transfert e alla relazione terapeutica.</p></div>
+      <div class="card"><span class="n">III</span><h3>Incongruenza di genere</h3><p>Ascolto e accompagnamento di adolescenti e adulti che vivono un’esperienza di incongruenza di genere, senza giudizio e nel rispetto dei tempi personali.</p></div>
+      <div class="card"><span class="n">IV</span><h3>Adolescenza</h3><p>Sostegno in una fase di cambiamento: identità, relazioni, scuola, ansia, umore. Con il coinvolgimento dei genitori quando necessario.</p></div>
+      <div class="card"><span class="n">V</span><h3>Coppia</h3><p>Percorsi per due: comprensione degli schemi che si ripetono, della comunicazione e dei momenti di crisi o di transizione.</p></div>
+      <div class="card"><span class="n">VI</span><h3>Individuazione</h3><p>Percorsi non legati a un sintomo preciso, per chi desidera conoscersi più a fondo e dare continuità al proprio processo di crescita.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="percorso">
+  <div class="wrap two">
+    <div>
+      <span class="eyebrow">Il percorso</span>
+      <h2>Come si svolge il lavoro</h2>
+      <p>Il setting è definito con chiarezza fin dall’inizio: durata e frequenza degli incontri, onorario, modalità di disdetta. Gli incontri si tengono a Roma o online.</p>
+      <ul class="list">
+        <li><strong>Adolescenti, adulti e coppie</strong>, in percorso individuale o di coppia</li>
+        <li><strong>In studio a Roma</strong> oppure in videoconferenza</li>
+        <li><strong>Riservatezza</strong> garantita dal segreto professionale</li>
+      </ul>
+      <p class="note">Per i minori di 18 anni il percorso richiede il consenso informato di entrambi i genitori.</p>
+    </div>
+    <div>
+      <div class="step" data-n="01"><h3>Primo contatto</h3><p>Mi scrivi o mi chiami e fissiamo un colloquio conoscitivo.</p></div>
+      <div class="step" data-n="02"><h3>Colloquio conoscitivo</h3><p>Ascolto la tua richiesta, ti spiego come lavoro e valutiamo insieme se proseguire.</p></div>
+      <div class="step" data-n="03"><h3>Il percorso</h3><p>Definiamo obiettivi, frequenza e durata. Verifichiamo periodicamente il cammino fatto.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="formazione" class="alt">
+  <div class="wrap two">
+    <div>
+      <span class="eyebrow">Formazione ed esperienza clinica</span>
+      <h2>Titoli e percorso professionale</h2>
+      <div class="timeline">
+        <div><span>IN CORSO</span><p><strong>Scuola di specializzazione in psicoterapia ad indirizzo junghiano</strong><br>A.I.P.A. · Associazione Italiana di Psicologia Analitica</p></div>
+        <div><span>2021</span><p><strong>Laurea magistrale in Psicopatologia Dinamica dello Sviluppo</strong><br>Facoltà di Medicina e Psicologia</p></div>
+        <div><span>CLINICA</span><p><strong>Attività clinica in libera professione a Roma</strong><br>Psicologia analitica con adolescenti, adulti e coppie</p></div>
+        <div><span>CLINICA</span><p><strong>Esperienza clinica nel terzo settore</strong><br>Lavoro con persone in contesti di fragilità</p></div>
+        <div><span>2026</span><p><strong>Relatrice alla 3ª Conferenza GTJ</strong><br>Gruppo AIPA-CIPA sui disturbi traumatico-dissociativi · «Una stanza tutta per me», gestione del transfert</p></div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">Dal marzo 2027</span>
+      <h2>Psicologa clinica, dal 2027 psicoterapeuta</h2>
+      <p>Il percorso di specializzazione prevede, oltre alla formazione teorica, il lavoro analitico personale e la supervisione clinica continuativa. Questi elementi sono parte della mia pratica quotidiana e tutelano la qualità del lavoro con chi si rivolge a me.</p>
+      <p>Dal marzo 2027, a conclusione del percorso, conseguirò il titolo di psicoterapeuta e psicologa analitica, con le stesse modalità di lavoro e lo stesso impegno etico.</p>
+      <p style="margin-top:22px;font-size:.88rem;color:var(--ink-soft)">Mi attengo al Codice Deontologico degli Psicologi Italiani.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contatti" class="contact">
+  <div class="wrap two">
+    <div>
+      <span class="eyebrow" style="color:var(--accent-soft)">Contatti</span>
+      <h2>Richiedi un colloquio</h2>
+      <p>Scrivimi per un primo contatto. Le informazioni che invii sono coperte da riservatezza. Per urgenze cliniche non utilizzare il modulo: rivolgiti al 112 o al pronto soccorso più vicino.</p>
+      <ul class="info">
+        <li><b>Telefono</b> <a href="tel:+393293882202" style="text-decoration:none">+39 329 38 82 202</a></li>
+        <li><b>Email</b> <a href="mailto:psy.valentinacoletta@gmail.com" style="text-decoration:none">psy.valentinacoletta@gmail.com</a></li>
+        <li><b>PEC</b> <a href="mailto:valentina.coletta@psypec.it" style="text-decoration:none">valentina.coletta@psypec.it</a></li>
+        <li><b>Studio</b> Via Ludovico di Savoia, 12 · 00185 Roma</li>
+        <li><b>Online</b> Videoconferenza su richiesta</li>
+      </ul>
+
+
+      <div class="social" aria-label="Canali social">
+        <a href="https://www.instagram.com/soglie_psicologia_analitica/" target="_blank" rel="noopener" aria-label="Instagram: Soglie, psicologia analitica"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.4A4.6 4.6 0 1 0 12 16.6 4.6 4.6 0 0 0 12 7.4zm0 7.6a3 3 0 1 1 0-6 3 3 0 0 1 0 6zM17.8 6.2a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21 8c0-2.5-2-4.5-4.5-4.5h-9C5 3.5 3 5.5 3 8v8c0 2.5 2 4.5 4.5 4.5h9C19 20.5 21 18.5 21 16V8zm-1.6 8a2.9 2.9 0 0 1-2.9 2.9h-9A2.9 2.9 0 0 1 4.6 16V8a2.9 2.9 0 0 1 2.9-2.9h9A2.9 2.9 0 0 1 19.4 8v8z"/></svg><span>Instagram</span></a>
+        <a href="https://www.youtube.com/channel/UC7u8be7LmQTEkU4rSK8BkAw" target="_blank" rel="noopener" aria-label="Canale YouTube Soglie"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-3.2.5-4.8s-.1-3.2-.5-4.8zM9.8 15V9l5.4 3-5.4 3z"/></svg><span>YouTube</span></a>
+        <a href="https://www.linkedin.com/in/valentina-coletta-172968101/" target="_blank" rel="noopener" aria-label="Profilo LinkedIn di Valentina Coletta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg><span>LinkedIn</span></a>
+      </div>
+
+      <!-- MAPPA: per cambiare indirizzo modifica solo data-address qui sotto -->
+      <div class="map" id="mappa" data-src="https://www.google.com/maps?q=Via+Ludovico+di+Savoia,+12,+00185+Roma&output=embed">
+        <div class="map-box" id="map-box">
+          <p>La mappa è un contenuto di Google e viene mostrata solo con il tuo consenso ai cookie di terze parti.</p>
+          <button type="button" class="btn" id="map-consent">Consenti e mostra la mappa</button>
+        </div>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Via+Ludovico+di+Savoia,+12,+00185+Roma" target="_blank" rel="noopener">Apri in Google Maps ↗</a>
+      </div>
+    </div>
+    <form name="contatto" method="POST" action="/grazie.html" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contatto">
+      <p class="hp"><label>Non compilare: <input name="bot-field"></label></p>
+      <label for="nome">Nome e cognome</label>
+      <input type="text" id="nome" name="nome" required autocomplete="name">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required autocomplete="email">
+      <label for="tel">Telefono (facoltativo)</label>
+      <input type="tel" id="tel" name="telefono" autocomplete="tel">
+      <label for="per">Per chi è la richiesta</label>
+      <select id="per" name="per_chi">
+        <option>Per me (adulto)</option>
+        <option>Per un/una adolescente</option>
+        <option>Per la coppia</option>
+      </select>
+      <label for="mod">Modalità preferita</label>
+      <select id="mod" name="modalita">
+        <option>In presenza a Roma</option>
+        <option>Online</option>
+        <option>Nessuna preferenza</option>
+      </select>
+      <label for="msg">Messaggio (breve, senza dettagli clinici)</label>
+      <textarea id="msg" name="messaggio"></textarea>
+      <div class="consent">
+        <input type="checkbox" id="privacy" name="privacy" required>
+        <label for="privacy">Ho letto l’<a href="/privacy.html">informativa privacy</a> e acconsento al trattamento dei dati per essere ricontattato/a.</label>
+      </div>
+      <button class="btn" type="submit">Invia la richiesta</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="social foot" aria-label="Canali social">
+        <a href="https://www.instagram.com/soglie_psicologia_analitica/" target="_blank" rel="noopener" aria-label="Instagram: Soglie, psicologia analitica"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.4A4.6 4.6 0 1 0 12 16.6 4.6 4.6 0 0 0 12 7.4zm0 7.6a3 3 0 1 1 0-6 3 3 0 0 1 0 6zM17.8 6.2a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21 8c0-2.5-2-4.5-4.5-4.5h-9C5 3.5 3 5.5 3 8v8c0 2.5 2 4.5 4.5 4.5h9C19 20.5 21 18.5 21 16V8zm-1.6 8a2.9 2.9 0 0 1-2.9 2.9h-9A2.9 2.9 0 0 1 4.6 16V8a2.9 2.9 0 0 1 2.9-2.9h9A2.9 2.9 0 0 1 19.4 8v8z"/></svg><span>Instagram</span></a>
+        <a href="https://www.youtube.com/channel/UC7u8be7LmQTEkU4rSK8BkAw" target="_blank" rel="noopener" aria-label="Canale YouTube Soglie"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-3.2.5-4.8s-.1-3.2-.5-4.8zM9.8 15V9l5.4 3-5.4 3z"/></svg><span>YouTube</span></a>
+        <a href="https://www.linkedin.com/in/valentina-coletta-172968101/" target="_blank" rel="noopener" aria-label="Profilo LinkedIn di Valentina Coletta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg><span>LinkedIn</span></a>
+      </div>
+    <p><strong>Dott.ssa Valentina Coletta</strong> · Psicologa clinica · Iscritta all’Albo A dell’Ordine degli Psicologi del Lazio n. 28467 · P. IVA 16348121001 · PEC <a href="mailto:valentina.coletta@psypec.it">valentina.coletta@psypec.it</a></p>
+    <p id="privacy-info" style="margin-top:10px"><a href="/privacy.html">Informativa privacy</a> · <a href="/privacy.html#cookie">Informativa cookie</a> · <button type="button" class="linkbtn" id="cb-open">Preferenze cookie</button></p>
+    <p style="margin-top:10px">© 2026 Valentina Coletta. Le informazioni di questo sito hanno carattere informativo e non sostituiscono una valutazione clinica.</p>
+  </div>
+</footer>
+
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-labelledby="cb-title">
+  <button type="button" class="x" id="cb-close" aria-label="Chiudi senza accettare">×</button>
+  <h2 id="cb-title">Cookie e contenuti di terze parti</h2>
+  <p>Questo sito utilizza solo cookie tecnici. Il contenuto incorporato di Google Maps può invece installare cookie di terze parti, che saranno attivati solo se acconsenti. Chiudendo questo banner con la X o scegliendo “Rifiuta” continui la navigazione senza cookie di terze parti. Puoi cambiare scelta in ogni momento da “Preferenze cookie” nel footer. Maggiori dettagli nell’<a href="/privacy.html#cookie">informativa cookie</a>.</p>
+  <div class="row">
+    <button type="button" class="btn" id="cb-accept">Accetta</button>
+    <button type="button" class="btn refuse" id="cb-refuse">Rifiuta</button>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var KEY='cookie_consent_v1', SIX_MONTHS=182*24*60*60*1000;
+    var banner=document.getElementById('cookie-banner');
+    var mapEl=document.getElementById('mappa'), box=document.getElementById('map-box');
+    function read(){try{var v=JSON.parse(localStorage.getItem(KEY));if(v&&Date.now()-v.t<SIX_MONTHS)return v;}catch(e){}return null;}
+    function save(c){try{localStorage.setItem(KEY,JSON.stringify({maps:c,t:Date.now()}));}catch(e){}}
+    function showMap(){
+      if(!mapEl||box.classList.contains('loaded'))return;
+      box.innerHTML='<iframe title="Mappa dello studio: Via Ludovico di Savoia 12, Roma" referrerpolicy="no-referrer-when-downgrade" src="'+mapEl.getAttribute('data-src')+'"></iframe>';
+      box.className='map-box loaded';
+    }
+    function hideMap(){
+      if(!mapEl)return;
+      box.className='map-box';
+      box.innerHTML='<p>La mappa è un contenuto di Google e viene mostrata solo con il tuo consenso ai cookie di terze parti.</p><button type="button" class="btn" id="map-consent">Consenti e mostra la mappa</button>';
+      document.getElementById('map-consent').addEventListener('click',function(){save(true);showMap();banner.classList.remove('show');});
+    }
+    function decide(ok){save(ok);banner.classList.remove('show');ok?showMap():hideMap();}
+    document.getElementById('cb-accept').addEventListener('click',function(){decide(true);});
+    document.getElementById('cb-refuse').addEventListener('click',function(){decide(false);});
+    document.getElementById('cb-close').addEventListener('click',function(){decide(false);});
+    document.getElementById('cb-open').addEventListener('click',function(){banner.classList.add('show');});
+    var mc=document.getElementById('map-consent');
+    if(mc)mc.addEventListener('click',function(){save(true);showMap();banner.classList.remove('show');});
+    var c=read();
+    if(c===null){banner.classList.add('show');}
+    else if(c.maps){showMap();}
+  })();
+  (function(){
+    var r=document.getElementById('ritratto');
+    if(r){['contextmenu','dragstart','selectstart'].forEach(function(e){r.addEventListener(e,function(ev){ev.preventDefault();});});}
+  })();
+</script>
+</body>
+</html>
