@@ -3,6 +3,7 @@
   var KEY = 'cookie_consent_v2', SIX_MONTHS = 182 * 24 * 60 * 60 * 1000, GTM_ID = 'GTM-NCBD5SLJ';
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
+  window.gtag = gtag;
   // Consent Mode: tutto negato finché l'utente non accetta
   gtag('consent', 'default', {
     ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied'
@@ -32,6 +33,12 @@
       s.async = true;
       s.src = 'https://www.googletagmanager.com/gtm.js?id=' + GTM_ID;
       document.head.appendChild(s);
+    },
+    hasConsent: function () {
+      try {
+        var v = JSON.parse(localStorage.getItem(KEY));
+        return !!(v && v.maps && Date.now() - v.t < SIX_MONTHS);
+      } catch (e) { return false; }
     },
     revoke: function () {
       clearGoogleCookies();
