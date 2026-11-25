@@ -140,6 +140,7 @@
   }
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+<script src="/tracking.js"></script>
 </head>
 <body>
 
@@ -329,7 +330,7 @@
 <div id="cookie-banner" role="dialog" aria-live="polite" aria-labelledby="cb-title">
   <button type="button" class="x" id="cb-close" aria-label="Chiudi senza accettare">×</button>
   <h2 id="cb-title">Cookie e contenuti di terze parti</h2>
-  <p>Questo sito utilizza solo cookie tecnici. Il contenuto incorporato di Google Maps può invece installare cookie di terze parti, che saranno attivati solo se acconsenti. Chiudendo questo banner con la X o scegliendo “Rifiuta” continui la navigazione senza cookie di terze parti. Puoi cambiare scelta in ogni momento da “Preferenze cookie” nel footer. Maggiori dettagli nell’<a href="/privacy.html#cookie">informativa cookie</a>.</p>
+  <p>Questo sito utilizza cookie tecnici. Con il tuo consenso utilizza anche strumenti di Google (Google Tag Manager e Google Ads) per misurare l’efficacia delle campagne pubblicitarie, e mostra la mappa di Google Maps: questi servizi possono installare cookie di terze parti. Chiudendo il banner con la X o scegliendo “Rifiuta” continui la navigazione senza cookie di terze parti. Puoi cambiare scelta in ogni momento da “Preferenze cookie” nel footer. Maggiori dettagli nell’<a href="/privacy.html#cookie">informativa cookie</a>.</p>
   <div class="row">
     <button type="button" class="btn" id="cb-accept">Accetta</button>
     <button type="button" class="btn refuse" id="cb-refuse">Rifiuta</button>
@@ -338,7 +339,7 @@
 
 <script>
   (function(){
-    var KEY='cookie_consent_v1', SIX_MONTHS=182*24*60*60*1000;
+    var KEY='cookie_consent_v2', SIX_MONTHS=182*24*60*60*1000;
     var banner=document.getElementById('cookie-banner');
     var mapEl=document.getElementById('mappa'), box=document.getElementById('map-box');
     function read(){try{var v=JSON.parse(localStorage.getItem(KEY));if(v&&Date.now()-v.t<SIX_MONTHS)return v;}catch(e){}return null;}
@@ -352,15 +353,15 @@
       if(!mapEl)return;
       box.className='map-box';
       box.innerHTML='<p>La mappa è un contenuto di Google e viene mostrata solo con il tuo consenso ai cookie di terze parti.</p><button type="button" class="btn" id="map-consent">Consenti e mostra la mappa</button>';
-      document.getElementById('map-consent').addEventListener('click',function(){save(true);showMap();banner.classList.remove('show');});
+      document.getElementById('map-consent').addEventListener('click',function(){save(true);showMap();if(window.cookieTracking)window.cookieTracking.grant();banner.classList.remove('show');});
     }
-    function decide(ok){save(ok);banner.classList.remove('show');ok?showMap():hideMap();}
+    function decide(ok){var prev=read();save(ok);banner.classList.remove('show');if(ok){showMap();if(window.cookieTracking)window.cookieTracking.grant();}else{hideMap();if(prev&&prev.maps&&window.cookieTracking)window.cookieTracking.revoke();}}
     document.getElementById('cb-accept').addEventListener('click',function(){decide(true);});
     document.getElementById('cb-refuse').addEventListener('click',function(){decide(false);});
     document.getElementById('cb-close').addEventListener('click',function(){decide(false);});
     document.getElementById('cb-open').addEventListener('click',function(){banner.classList.add('show');});
     var mc=document.getElementById('map-consent');
-    if(mc)mc.addEventListener('click',function(){save(true);showMap();banner.classList.remove('show');});
+    if(mc)mc.addEventListener('click',function(){save(true);showMap();if(window.cookieTracking)window.cookieTracking.grant();banner.classList.remove('show');});
     var c=read();
     if(c===null){banner.classList.add('show');}
     else if(c.maps){showMap();}
