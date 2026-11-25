@@ -1,6 +1,6 @@
-/* Google Tag Manager (GTM-52H83CBB): caricato SOLO dopo il consenso ai cookie di terze parti. */
+/* Google Tag Manager (GTM-NCBD5SLJ): caricato SOLO dopo il consenso ai cookie di terze parti. */
 (function () {
-  var KEY = 'cookie_consent_v2', SIX_MONTHS = 182 * 24 * 60 * 60 * 1000, GTM_ID = 'GTM-52H83CBB';
+  var KEY = 'cookie_consent_v2', SIX_MONTHS = 182 * 24 * 60 * 60 * 1000, GTM_ID = 'GTM-NCBD5SLJ';
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
   // Consent Mode: tutto negato finché l'utente non accetta
