@@ -25,12 +25,11 @@
     <p>Ti risponderò in genere entro due giorni lavorativi.</p>
     <a href="/">Torna alla pagina</a>
   </div>
-<!-- Google tag (gtag.js) event: conversione "Invio modulo per i lead", inviata solo se l'utente ha acconsentito ai cookie di terze parti -->
+<!-- Google tag (gtag.js) event: conversione "Invio modulo per i lead".
+     Con Consent Mode avanzata parte sempre: senza consenso Google riceve solo un segnale anonimo senza cookie. -->
 <script>
-  if (window.cookieTracking && window.cookieTracking.hasConsent()) {
-    gtag('event', 'ads_conversion_Invio_modulo_per_i_lead_1', {
-      // <event_parameters>
-    });
+  if (window.gtag) {
+    gtag('event', 'ads_conversion_Invio_modulo_per_i_lead_1', {});
   }
 </script>
 </body>
