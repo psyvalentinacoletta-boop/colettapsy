@@ -16,9 +16,16 @@
     } catch (e) { return false; }
   }
 
-  // Consent Mode: tutto negato di default
+  // Consent Mode: negato di default nello Spazio economico europeo, Regno Unito e Svizzera
+  // (dove serve il consenso preventivo); concesso di default nel resto del mondo.
   gtag('consent', 'default', {
-    ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied'
+    ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied',
+    region: ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT',
+             'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO',
+             'GB', 'CH']
+  });
+  gtag('consent', 'default', {
+    ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'
   });
   // Senza consenso, rimuove gli identificativi dei clic sugli annunci dai segnali inviati
   gtag('set', 'ads_data_redaction', true);
